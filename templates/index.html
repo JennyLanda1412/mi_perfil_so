@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jenny 💗 Mi mundo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header class="nav">
+    <a href="#inicio" class="logo">Jenny 💗</a>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#gustos">Mis gustos</a>
+      <a href="#galleta">Galleta</a>
+      <a href="#galeria">Fotos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-text">
+        <p class="hello">¡Hola! Soy</p>
+        <h1>Jenny</h1>
+        <p class="lead">Alegre, divertida y tranquila. Me encanta reírme, conocer cosas nuevas y disfrutar de los pequeños momentos.</p>
+        <a href="#galleta" class="btn">Conoce a Galleta 🐶</a>
+      </div>
+      <div class="hero-photo">
+        <img src="{{ url_for('static', filename='img/yo.jpeg') }}" alt="Foto de Jenny con suéter rojo y blanco y lentes">
+        <span class="sticker s1">🎮</span>
+        <span class="sticker s2">🎵</span>
+        <span class="sticker s3">💗</span>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="about">
+      <h2>Sobre mí</h2>
+      <p>Disfruto mucho estar con las personas que quiero, por eso mis mejores ratos son con mi familia, con mi novio y, por supuesto, con Galleta. En mi tiempo libre hago lo que más me gusta: convivir, reírme y pasarla bien.</p>
+    </section>
+
+    <section id="gustos" class="likes">
+      <h2>Lo que me gusta</h2>
+      <ul class="chips">
+        <li data-msg="¡Maratón de series!">📺 Ver series</li>
+        <li data-msg="Mi familia es lo máximo">👨‍👩‍👧 Tiempo en familia</li>
+        <li data-msg="Para distraerme y pasarla bien">🎮 Videojuegos</li>
+        <li data-msg="La música siempre ayuda">🎧 Escuchar música</li>
+        <li data-msg="Salir, platicar y compartir">💑 Estar con mi novio</li>
+        <li data-msg="Siempre hay algo nuevo">✨ Conocer cosas nuevas</li>
+        <li data-msg="Reír es lo mejor">😂 Reírme</li>
+        <li data-msg="Mi parte favorita del día">🐶 Estar con Galleta</li>
+      </ul>
+      <p id="chip-msg" class="chip-msg" aria-live="polite">Toca una para saber más 👆</p>
+    </section>
+
+    <section id="galleta" class="pug">
+      <div class="pug-photo">
+        <img id="pug-img" src="{{ url_for('static', filename='img/galleta.jpeg') }}" alt="Galleta, la perrita pug de Jenny, con una playera rosa">
+      </div>
+      <div class="pug-text">
+        <h2>Ella es Galleta</h2>
+        <p>Mi perrita pug. Una de mis cosas favoritas es estar con ella y molestarla un poquito para jugar. Ella aguanta todo con esa carita. 🐾</p>
+        <button id="boop" class="btn">Molestar a Galleta</button>
+        <p class="counter">Veces que la molestaste: <strong id="count">0</strong></p>
+        <p id="pug-msg" class="pug-msg" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="galeria" class="gallery">
+      <h2>Mis momentos</h2>
+      <div class="grid">
+        <figure><img src="{{ url_for('static', filename='img/love.jpeg') }}" alt="Jenny con su novio al sol"><figcaption>Con mi novio 💕</figcaption></figure>
+        <figure><img src="{{ url_for('static', filename='img/yo2.jpeg') }}" alt="Foto de Jenny"><figcaption>Yo ✨</figcaption></figure>
+        <figure><img src="{{ url_for('static', filename='img/galleta.jpeg') }}" alt="Galleta la pug"><figcaption>Galleta 🐶</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>Hecho con mucho cariño 💗 Jenny y Galleta</footer>
+  <div id="hearts" aria-hidden="true"></div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
